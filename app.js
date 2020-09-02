@@ -17,8 +17,11 @@ const studentscheduledclassesRouter=require('./routes/scheduledclasses')
 const booksiteRouter=require('./routes/booksite')
 const contriabookRouter=require('./routes/contriabook')
 const cartRouter=require('./routes/cart')
+//............ 
+const discussion = require('./routes/discussion');
 const portname='localhost'
 const port=3000
+
 
 const url='mongodb://localhost:27017/school'
 
@@ -44,6 +47,8 @@ app.use('/booksite',booksiteRouter)
 app.use('/contriabook',contriabookRouter)
 app.use('/cart',cartRouter)
 app.use('/',mainRouter)
+//..... 
+app.use('/discussion',discussion);
 
 
 app.set('view engine', 'ejs');
